@@ -1,0 +1,15 @@
+string_success: "success"
+success: "success"
+status: "status"
+status_code: "status_code"
+code: "code"
+message: "message"
+render_success: "Sucess"
+show_limit:
+  limit: 6
+  show_5: 5
+  show_10: 10
+  show_15: 15
+  show_20: 20
+  show_30: 30
+  show_50: 50

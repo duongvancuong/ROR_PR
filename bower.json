@@ -1,0 +1,21 @@
+{
+  "name": "shoes_shop",
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "main": "index.js",
+  "authors": [
+    "duongvancuong <vancuong279dn@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/duongvancuong/ROR_PR",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor/assets/bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
