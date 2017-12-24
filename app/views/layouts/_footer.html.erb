@@ -1,3 +1,9 @@
+<div class="footer">
+  <%= render "layouts/footer_top" %>
+  <div class="footer-middle">
+    <%= render "layouts/footer_middle" %>
+  </div>
+</div>
 <div class="footer-bottom">
   <div class="wrap">
      <div class="section group">
@@ -159,3 +165,21 @@
     <p>© All rights reserved | Template by&nbsp;<a href="http://w3layouts.com/"> W3Layouts</a></p>
   </div>
 </div>
+<script type="text/javascript">
+  $(document).ready(function () {
+    var defaults = {
+      containerID: 'toTop', // fading element id
+      containerHoverID: 'toTopHover', // fading element hover id
+      scrollSpeed: 1200,
+      easingType: 'linear'
+    };
+    $().UItoTop({ easingType: 'easeOutQuart' });
+    $("#show-limit").on("change", function(){
+      $(this).closest("form").trigger("submit");
+    });
+  });
+</script>
+<a href="#" id="toTop" style="display: block;">
+  <span id="toTopHover" style="opacity: 1;"></span>
+</a>
+
