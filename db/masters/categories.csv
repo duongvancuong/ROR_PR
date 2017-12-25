@@ -1,0 +1,13 @@
+id,name,type
+1,Nike,Category::Brand
+2,Adias,Category::Brand
+3,Fuma,Category::Brand
+4,Red,Category::Color
+5,Blue,Category::Color
+6,Green,Category::Color
+7,Black,Category::Color
+8,Yellow,Category::Color
+9,Brown,Category::Color
+10,High,Category::Style
+11,Short,Category::Style
+12,Thin,Category::Style
