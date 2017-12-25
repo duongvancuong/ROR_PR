@@ -1,0 +1,12 @@
+<div class="login">
+  <div class="wrap">
+    <%= render "shared/right_side_bar" %>
+    <div class="cont span_2_of_3">
+      <%= render "shared/tool_bar" %>
+      <% @products_sliced.each_with_index do |products, index| %>
+        <%= render "products", products: products %>
+      <% end %>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>

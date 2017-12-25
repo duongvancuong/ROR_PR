@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   end
 
   root "home#index", concerns: :paginatable
+  resources :shop, only: :index
 end

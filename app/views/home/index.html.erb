@@ -1,5 +1,4 @@
-<body>
-<%= render "banner" %>
+  <%= render "banner" %>
   <div class="main">
     <div class="wrap">
       <%= render "social" %>
@@ -11,26 +10,3 @@
       <% end %>
     </div>
   </div>
-  <div class="footer">
-    <%= render "footer_top" %>
-    <div class="footer-middle">
-      <%= render "footer_middle" %>
-    </div>
-  </div>
-  <script type="text/javascript">
-    $(document).ready(function () {
-      var defaults = {
-        containerID: 'toTop', // fading element id
-        containerHoverID: 'toTopHover', // fading element hover id
-        scrollSpeed: 1200,
-        easingType: 'linear'
-      };
-      $().UItoTop({ easingType: 'easeOutQuart' });
-      $("#show-limit").on("change", function(){
-        $(this).closest("form").trigger("submit");
-      });
-    });
-  </script>
-  <a href="#" id="toTop" style="display: block;">
-    <span id="toTopHover" style="opacity: 1;"></span>
-  </a>

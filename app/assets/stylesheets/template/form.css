@@ -93,7 +93,7 @@
 	left:-3px;
 	width: 15px;
 	height: 15px;
-	background: url(../images/b-arrow.png);
+	background: url(../b-arrow.png);
 	text-align: center;
 }
 .sky-form .checkbox input + i:after {
@@ -105,7 +105,7 @@
 .sky-form .radio input:checked + i,
 .sky-form .checkbox input:checked + i,
 .sky-form .toggle input:checked + i {
-	border-color:#888;	
+	border-color:#888;
 }
 /*-- start scrollpane --*/
 .jspContainer{
