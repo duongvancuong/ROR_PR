@@ -1,0 +1,10 @@
+<section class="sky-form">
+  <h4>Category's Name</h4>
+  <div class="row row1 scroll-pane">
+    <div class="col col-4">
+      <% categories.each_with_index do |category, index| %>
+        <%= render "shared/category", category: category %>
+      <% end %>
+    </div>
+  </div>
+</section>
