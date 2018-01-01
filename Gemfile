@@ -26,6 +26,7 @@ gem "carrierwave"
 gem "mini_magick"
 gem "ransack"
 gem "config"
+gem "draper"
 
 group :development, :test do
   gem "byebug", platform: :mri

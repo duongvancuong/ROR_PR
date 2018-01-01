@@ -3,7 +3,7 @@ class ShopController < ApplicationController
 
   def index
     @search = Product.all.ransack params[:q]
-    @products = @search.result.page(params[:page]).per(params[:limit] || Settings.show_limit.limit)
+    @products = @search.result.page(params[:page]).per(params[:limit] || Settings.show_limit.limit).decorate
     @products_sliced = @products.each_slice(3).to_a
   end
 
