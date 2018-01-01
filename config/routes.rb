@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     get '(page/:page)', action: :index, on: :collection, as: ''
   end
 
-  root "home#index", concerns: :paginatable
+  root "home#index"
+  resources :home, only: :index, concerns: :paginatable
   resources :shop, only: :index
 end
