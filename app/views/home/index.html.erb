@@ -3,10 +3,6 @@
     <div class="wrap">
       <%= render "social" %>
       <%= render partial: "products", locals: {products_box1: @products_box1, products_box2: @products_box2} %>
-      <%= paginate @products, theme: 'twitter-bootstrap-3' %>
-      <%= search_form_for @search, url: root_path do |f|%>
-        <%= select_tag :limit, options_from_collection_for_select(Settings.show_limit, :second, :second, selected: params[:limit] || Settings.show_limit.limit),id: "show-limit"%>
-        <%= f.submit "search", class: "btn btn-info", style: "display: none; margin-right: 10px"%>
-      <% end %>
+      <%= render "shared/paginate", objects: @products %>
     </div>
   </div>
