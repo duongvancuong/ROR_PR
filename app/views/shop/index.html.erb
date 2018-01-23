@@ -1,6 +1,6 @@
 <div class="login">
   <div class="wrap">
-    <%= render "shared/right_side_bar", categories: @categories %>
+    <%= render partial: "shared/right_side_bar", locals: {categories: @categories, search: @search} %>
     <div class="cont span_2_of_3">
       <%= render partial: "shared/tool_bar", locals: {products: @products, search: @search} %>
       <% @products_sliced.each_with_index do |products, index| %>
@@ -10,3 +10,4 @@
     <div class="clear"></div>
   </div>
 </div>
+<% javascript_include_tag 'side_bar' %>

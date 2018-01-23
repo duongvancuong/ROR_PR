@@ -1,5 +1,8 @@
 <div class="rsidebar span_1_of_left">
-  <% categories.each_with_index do |(key, value), index| %>
-    <%= render "shared/categories", categories: value %>
+  <%= search_form_for search, url: shop_index_path do |f|%>
+    <% categories.each_with_index do |(key, value), index| %>
+      <%= render "shared/categories", categories: value %>
+    <% end %>
+    <%= f.submit "search", class: "btn btn-info", style: " margin-right: 10px"%>
   <% end %>
 </div>

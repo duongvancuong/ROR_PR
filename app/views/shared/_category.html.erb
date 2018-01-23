@@ -1,4 +1,4 @@
 <label class="checkbox">
-  <input type="checkbox" name="checkbox">
+  <%= check_box_tag "q[categories_id_eq_any][]", category.id, false, class: "category_class", id: "category_#{category.id}" %>
   <i></i><%= category.name %><%= "(#{category.product_count})" %>
 </label>
