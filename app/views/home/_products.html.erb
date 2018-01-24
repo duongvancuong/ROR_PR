@@ -2,14 +2,14 @@
   <% if products_box1 %>
     <div class="box1">
       <% products_box1.each_with_index do |product, index| %>
-        <%= render "product", product: product %>
+        <%= render "product/product", product: product %>
       <% end %>
     </div>
   <% end %>
   <% if products_box2 %>
     <div class="box1">
       <% products_box2.each_with_index do |product, index| %>
-      <%= render "product", product: product %>
+      <%= render "product/product", product: product %>
       <% end %>
     </div>
   <% end %>
