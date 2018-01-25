@@ -1,0 +1,106 @@
+<div class="login">
+  <div class="wrap">
+    <%= render partial: "shared/right_side_bar", locals: {categories: @categories, search: @search} %>
+    <div class="cont span_2_of_3">
+      <div class="labout span_1_of_a1">
+        <ul id="etalage">
+          <li>
+            <a href="#">
+              <%= image_tag @product.image_url || "t1.jpg", class: "etalage_thumb_image" %>
+              <%= image_tag @product.image_url || "t2.jpg", class: "etalage_source_image" %>
+            </a>
+          </li>
+          <li>
+            <%= image_tag @product.image_url || "t2.jpg", class: "etalage_thumb_image" %>
+            <%= image_tag @product.image_url || "t2.jpg", class: "etalage_source_image" %>
+          </li>
+          <li>
+            <%= image_tag @product.image_url || "t3.jpg", class: "etalage_thumb_image" %>
+            <%= image_tag @product.image_url || "t3.jpg", class: "etalage_source_image" %>
+          </li>
+          <li>
+            <%= image_tag @product.image_url || "t4.jpg", class: "etalage_thumb_image" %>
+            <%= image_tag @product.image_url || "t4.jpg", class: "etalage_source_image" %>
+          </li>
+          <li>
+            <%= image_tag @product.image_url || "t5.jpg", class: "etalage_thumb_image" %>
+            <%= image_tag @product.image_url || "t5.jpg", class: "etalage_source_image" %>
+          </li>
+          <li>
+            <%= image_tag @product.image_url || "t6.jpg", class: "etalage_thumb_image" %>
+            <%= image_tag @product.image_url || "t6.jpg", class: "etalage_source_image" %>
+          </li>
+          <li>
+            <%= image_tag @product.image_url || "t1.jpg", class: "etalage_thumb_image" %>
+            <%= image_tag @product.image_url || "t1.jpg", class: "etalage_source_image" %>
+          </li>
+        </ul>
+      </div>
+      <div class="cont1 span_2_of_a1">
+        <h3 class="m_3">Lorem ipsum dolor sit amet</h3>
+        <div class="price_single">
+          <span class="reducedfrom">$66.00</span>
+          <span class="actual">$12.00</span>
+        </div>
+        <p class="m_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <div class="social_single">
+          <ul>
+            <li class="fb"><a href="#"><span> </span></a></li>
+            <li class="tw"><a href="#"><span> </span></a></li>
+            <li class="g_plus"><a href="#"><span> </span></a></li>
+            <li class="rss"><a href="#"><span> </span></a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <ul id="flexiselDemo3">
+        <li><%= image_tag "pic11.jpg" %><div class="grid-flex"><a href="#">Bloch</a><p>Rs 850</p></div></li>
+        <li><%= image_tag "pic11.jpg" %><div class="grid-flex"><a href="#">Capzio</a><p>Rs 850</p></div></li>
+        <li><%= image_tag "pic11.jpg" %><div class="grid-flex"><a href="#">Zumba</a><p>Rs 850</p></div></li>
+        <li><%= image_tag "pic11.jpg" %><div class="grid-flex"><a href="#">Bloch</a><p>Rs 850</p></div></li>
+        <li><%= image_tag "pic11.jpg" %><div class="grid-flex"><a href="#">Capzio</a><p>Rs 850</p></div></li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<script>
+  jQuery(document).ready(function($){
+    $("#flexiselDemo3").flexisel({
+      visibleItems: 5,
+      animationSpeed: 1000,
+      autoPlay: true,
+      autoPlaySpeed: 3000,
+      pauseOnHover: true,
+      enableResponsiveBreakpoints: true,
+        responsiveBreakpoints: {
+          portrait: {
+            changePoint:480,
+            visibleItems: 1
+          },
+          landscape: {
+            changePoint:640,
+            visibleItems: 2
+          },
+          tablet: {
+            changePoint:768,
+            visibleItems: 3
+          }
+        }
+    });
+
+    $('#etalage').etalage({
+      thumb_image_width: 300,
+      thumb_image_height: 400,
+
+      show_hint: true
+    });
+    // This is for the dropdown list example:
+    $('.dropdownlist').change(function(){
+      etalage_show( $(this).find('option:selected').attr('class') );
+    });
+
+  });
+</script>
+<% javascript_include_tag 'etalage' %>
+<% javascript_include_tag 'flexisel' %>
