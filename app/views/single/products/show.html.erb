@@ -4,36 +4,12 @@
     <div class="cont span_2_of_3">
       <div class="labout span_1_of_a1">
         <ul id="etalage">
-          <li>
-            <a href="#">
-              <%= image_tag @product.image_url || "t1.jpg", class: "etalage_thumb_image" %>
-              <%= image_tag @product.image_url || "t2.jpg", class: "etalage_source_image" %>
-            </a>
-          </li>
-          <li>
-            <%= image_tag @product.image_url || "t2.jpg", class: "etalage_thumb_image" %>
-            <%= image_tag @product.image_url || "t2.jpg", class: "etalage_source_image" %>
-          </li>
-          <li>
-            <%= image_tag @product.image_url || "t3.jpg", class: "etalage_thumb_image" %>
-            <%= image_tag @product.image_url || "t3.jpg", class: "etalage_source_image" %>
-          </li>
-          <li>
-            <%= image_tag @product.image_url || "t4.jpg", class: "etalage_thumb_image" %>
-            <%= image_tag @product.image_url || "t4.jpg", class: "etalage_source_image" %>
-          </li>
-          <li>
-            <%= image_tag @product.image_url || "t5.jpg", class: "etalage_thumb_image" %>
-            <%= image_tag @product.image_url || "t5.jpg", class: "etalage_source_image" %>
-          </li>
-          <li>
-            <%= image_tag @product.image_url || "t6.jpg", class: "etalage_thumb_image" %>
-            <%= image_tag @product.image_url || "t6.jpg", class: "etalage_source_image" %>
-          </li>
-          <li>
-            <%= image_tag @product.image_url || "t1.jpg", class: "etalage_thumb_image" %>
-            <%= image_tag @product.image_url || "t1.jpg", class: "etalage_source_image" %>
-          </li>
+          <%= @product.photos.each do |photo| %>
+            <li>
+              <%= image_tag @product.photos.take&.image_url || "t1.jpg", class: "etalage_thumb_image" %>
+              <%= image_tag @product.photos.take&.image_url || "t1.jpg", class: "etalage_source_image" %>
+            </li>
+          <% end %>
         </ul>
       </div>
       <div class="cont1 span_2_of_a1">
@@ -42,7 +18,9 @@
           <span class="reducedfrom">$66.00</span>
           <span class="actual">$12.00</span>
         </div>
-        <p class="m_desc">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+        <p class="m_desc">
+          <%= @product.description %>
+        </p>
         <div class="social_single">
           <ul>
             <li class="fb"><a href="#"><span> </span></a></li>

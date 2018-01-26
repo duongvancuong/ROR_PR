@@ -7,7 +7,7 @@ class Single::ProductsController < ApplicationController
 
   private
   def load_product
-    @product ||= Product.find_by(id: params[:id])
+    @product ||= Product.includes(:photos).find_by(id: params[:id])
   end
 
   def load_categories

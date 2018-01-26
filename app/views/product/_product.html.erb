@@ -1,11 +1,11 @@
 <div class="col_1_of_single1 span_1_of_single1">
-  <a href="single.html">
+  <%= link_to single_product_path product do %>
     <div class="view1 view-fifth1">
       <div class="top_box">
         <h3 class="m_1"><%= product.name %></h3>
         <div class="grid_img">
           <div class="css3">
-            <%= image_tag product.image_url || "pic9.jpg" %>
+            <%= image_tag product.photos.take&.image_url || "pic9.jpg" %>
           </div>
           <div class="mask1">
             <div class="info">Quick View</div>
@@ -33,5 +33,5 @@
       </li>
     </ul>
     <div class="clear"></div>
-  </a>
+  <% end %>
 </div>
