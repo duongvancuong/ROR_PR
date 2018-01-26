@@ -45,7 +45,7 @@ Rails.application.configure do
   # Suppress logger output for asset requests.
   config.assets.quiet = true
 
-  config.assets.precompile += %w( side_bar.js )
+  config.assets.precompile += %w( side_bar.js flexisel.js etalage.js )
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 

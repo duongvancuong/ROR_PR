@@ -6,4 +6,7 @@ Rails.application.routes.draw do
   root "home#index"
   resources :home, only: :index, concerns: :paginatable
   resources :shop, only: :index
+  namespace :single do
+    resources  :products, only: :show
+  end
 end
